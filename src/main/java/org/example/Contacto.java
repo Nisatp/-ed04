@@ -6,6 +6,14 @@ import java.util.List;
  * Clase que representa un contacto con un nombre y una lista de números de teléfono.
  */
 class Contacto {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
+    }
+
     private String name;
     private List<String> phones;
     /**
