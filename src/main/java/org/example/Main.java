@@ -1,24 +1,11 @@
 package org.example;
 
-/**
- * Clase principal que demuestra el uso de la clase Agenda.
- */
 public class Main {
-    /**
-     * Método principal que ejecuta el programa.
-     *
-     * @param args Argumentos de línea de comandos (no utilizados).
-     */
     public static void main(String[] args) {
         // Crear una nueva agendaContactos.
-        Agenda agendaContactos = new Agenda();
+        Agenda agendaContactos = initAgenda();
 
-        // Añadir contactos a la agendaContactos.
-        agendaContactos.addContact("John Doe", "1234567890");
-        agendaContactos.addContact("Jane Doe", "9876543210");
-        agendaContactos.addContact("Mary Jane", "1122334455");
 
-        // Imprimir todos los contactos de la agendaContactos.
         System.out.println("Todos los contactos: ");
         for (Contacto c : agendaContactos.getContacts()) {
             System.out.println(c.getName() + " -> " + c.getPhones());
@@ -37,5 +24,15 @@ public class Main {
         for (Contacto c : agendaContactos.getContacts()) {
             System.out.println(c.getName() + " -> " + c.getPhones());
         }
+    }
+
+    private static Agenda initAgenda() {
+        Agenda agendaContactos = new Agenda();
+
+        // Añadir contactos a la agendaContactos.
+        agendaContactos.addContact("John Doe", "1234567890");
+        agendaContactos.addContact("Jane Doe", "9876543210");
+        agendaContactos.addContact("Mary Jane", "1122334455");
+        return agendaContactos;
     }
 }
